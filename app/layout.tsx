@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={clsx(ibmPlexSans.className, "text-base")}>
+      <body className={clsx(ibmPlexSans.className, "text-base", "text-accent")}>
         {children}
       </body>
     </html>

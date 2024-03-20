@@ -9,7 +9,10 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        base: "11px",
+        base: "13px",
+      },
+      colors: {
+        accent: "rgb(var(--accent-rgb))",
       },
     },
   },
