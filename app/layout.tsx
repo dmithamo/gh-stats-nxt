@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { IBM_Plex_Sans } from "next/font/google";
+import { AppLayout } from "./components/app-layout";
 import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -21,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={clsx(ibmPlexSans.className, "text-base", "text-accent")}>
-        {children}
+        <AppLayout>{children}</AppLayout>
       </body>
     </html>
   );

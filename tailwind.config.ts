@@ -13,6 +13,8 @@ const config: Config = {
       },
       colors: {
         accent: "rgb(var(--accent-rgb))",
+        back: "rgb(var(--background-rgb))",
+        fore: "rgb(var(--foreground-rgb))",
       },
     },
   },
