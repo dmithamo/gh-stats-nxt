@@ -1,16 +1,16 @@
 import { AppHeader } from "./app-header";
 
-type TLayoutProps = {
+type Props = {
   children: React.ReactNode;
 };
 
-export const AppLayout: React.FC<TLayoutProps> = ({ children }) => (
+export const AppLayout: React.FC<Props> = ({ children }) => (
   <>
-    <main className="h-screen flex flex-col">
+    <main className="min-h-screen flex flex-col">
       <AppHeader />
-      <section className="flex-1">{children}</section>
+      <section className="flex-1 p-4">{children}</section>
     </main>
-    <footer className="p-8 bg-fore text-back">
+    <footer className="px-4 py-5 bg-fore text-back">
       Footer here: visible on scroll
     </footer>
   </>
