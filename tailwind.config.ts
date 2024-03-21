@@ -17,9 +17,7 @@ const config: Config = {
         fore: "rgb(var(--foreground-rgb))",
       },
       backgroundImage: {
-        digital: "url('/images/digital-lines.jpg')",
-        stats: "url('/images/stats-bg.svg')",
-        waves: "url('/images/wavy-lines.jpg')",
+        waves: "url('/images/wavy-lines-cln.jpeg')",
       },
     },
   },

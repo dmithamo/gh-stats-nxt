@@ -1,5 +1,5 @@
 export const AppFooter: React.FC = () => (
-  <footer className="p-6 bg-black/80 text-white/80 flex justify-between">
+  <footer className="p-6 bg-black text-white/80 flex justify-between">
     <div>
       <span>Copyright &copy;{new Date().getUTCFullYear()} </span>
       <a
