@@ -16,11 +16,11 @@ const logoSizeClasses = (
 ): { iconSize: string; textSize: string } => {
   switch (size) {
     case ELogoSize.small:
-      return { iconSize: "h-4 w-4", textSize: "text-sm" };
+      return { iconSize: "h-5 w-5", textSize: "text-sm" };
     case ELogoSize.large:
       return { iconSize: "h-16 w-16", textSize: "text-4xl" };
     default:
-      return { iconSize: "h-7 w-7", textSize: "text-lg" };
+      return { iconSize: "h-10 w-10", textSize: "text-2xl" };
   }
 };
 
@@ -30,13 +30,14 @@ export const AppLogo: React.FC<Props> = ({ size }) => {
     <Link
       href={"/"}
       className={clsx(
-        "flex select-none gap-2 items-center uppercase font-bold text-accent",
-        textSize
+        "flex select-none items-center uppercase font-bold text-accent",
+        textSize,
+        { "gap-2": size != ELogoSize.large, "gap-4": size === ELogoSize.large }
       )}
     >
       <GHIcon fill="currentColor" className={clsx(iconSize)} />
       <span className="opacity-65 text-fore">{"///"}</span>
-      <span className="text-accent">GH Stats</span>
+      <span className="text-accent text-nowrap">GH Stats</span>
     </Link>
   );
 };
