@@ -11,13 +11,5 @@ export const AppFooter: React.FC = () => (
         dmithamo
       </a>
     </div>
-    <a
-      target="_blank"
-      rel="noopener noreferrer"
-      href="https://www.freepik.com/free-vector/vector-network-background-abstract-polygon-triangle_1306336.htm#from_view=detail_alsolike"
-      className="flex items-center"
-    >
-      Image by ikatod on Freepik
-    </a>
   </footer>
 );

@@ -16,9 +16,6 @@ const config: Config = {
         back: "rgb(var(--background-rgb))",
         fore: "rgb(var(--foreground-rgb))",
       },
-      backgroundImage: {
-        waves: "url('/images/wavy-lines-cln.jpeg')",
-      },
     },
   },
   plugins: [],

@@ -18,9 +18,9 @@ const logoSizeClasses = (
     case ELogoSize.small:
       return { iconSize: "h-5 w-5", textSize: "text-sm" };
     case ELogoSize.large:
-      return { iconSize: "h-16 w-16", textSize: "text-4xl" };
+      return { iconSize: "h-14 w-14", textSize: "text-3xl" };
     default:
-      return { iconSize: "h-10 w-10", textSize: "text-2xl" };
+      return { iconSize: "h-8 w-8", textSize: "text-2xl" };
   }
 };
 
@@ -36,8 +36,7 @@ export const AppLogo: React.FC<Props> = ({ size }) => {
       )}
     >
       <GHIcon fill="currentColor" className={clsx(iconSize)} />
-      <span className="opacity-65 text-fore">{"///"}</span>
-      <span className="text-accent text-nowrap">GH Stats</span>
+      <p className="text-fore font-extralight text-nowrap">GH Stats</p>
     </Link>
   );
 };

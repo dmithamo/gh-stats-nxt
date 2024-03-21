@@ -6,7 +6,7 @@ type Props = {
 
 export default function HeaderLessLayout({ children }: Props) {
   return (
-    <main className="bg-waves bg-cover bg-bottom relative">
+    <main className="">
       <section className="py-4 min-h-screen">{children}</section>
       <AppFooter />
     </main>
