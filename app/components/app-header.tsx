@@ -5,7 +5,6 @@ export const AppHeader: React.FC = () => {
   return (
     <header className="p-4 shadow flex justify-between items-center">
       <AppLogo size={ELogoSize.small} />
-      <div>Other header items</div>
     </header>
   );
 };

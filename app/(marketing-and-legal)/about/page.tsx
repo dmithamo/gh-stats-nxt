@@ -2,15 +2,21 @@ import { AppLogo } from "@/app/components/app-logo";
 
 export default function AboutPage() {
   return (
-    <div className="h-screen flex flex-col items-center justify-start gap-4">
-      <div className="p-8">
-        <AppLogo />
-      </div>
-      <div className="flex-1 p-4 flex flex-col gap-8">
-        <h2 className="text-lg">
-          GH Stats is an app I built to get familiar with the D3.js library
-        </h2>
-        <details>
+    <div className="h-fit w-fit flex flex-col justify-start gap-6 p-8">
+      <AppLogo />
+      <h2 className="text-lg">
+        GH Stats is an app I built to get familiar with the{" "}
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          className="underline underline-offset-4 text-accent"
+          href="https://d3js.org/"
+        >
+          D3.js library
+        </a>
+      </h2>
+      <div className="flex-1 flex flex-col gap-8 ">
+        <details open>
           <summary className="font-bold text-md">How it works</summary>
           And here will be some info about the architecture of the app or
           whatever

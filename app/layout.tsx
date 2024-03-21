@@ -5,7 +5,7 @@ import "./globals.css";
 
 const ibmPlexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["100", "400", "700"],
 });
 
 export const metadata: Metadata = {
