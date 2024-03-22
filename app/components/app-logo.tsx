@@ -21,7 +21,7 @@ type Props = {
 };
 
 const logoSizeClasses = (
-  size?: ELogoSize
+  size?: ELogoSize,
 ): { iconSize: string; textSize: string } => {
   switch (size) {
     case ELogoSize.small:
@@ -41,7 +41,7 @@ export const AppLogo: React.FC<Props> = ({ size }) => {
       className={clsx(
         "flex select-none items-center uppercase font-bold text-accent",
         textSize,
-        { "gap-2": size != ELogoSize.large, "gap-4": size === ELogoSize.large }
+        { "gap-2": size != ELogoSize.large, "gap-4": size === ELogoSize.large },
       )}
     >
       <GHIcon fill="currentColor" className={clsx(iconSize)} />
