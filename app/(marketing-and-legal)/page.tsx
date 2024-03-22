@@ -17,13 +17,10 @@ export default function HomePage() {
         Sample D3 output here maybe? Yes! Incentive to login
       </div>
       <div className="p-8 w-fit rounded-full flex flex-col items-center justify-center gap-6">
-        <Link
-          href={"/login"}
-          className="py-4 px-8 bg-fore text-back font-bold rounded-3xl flex items-center gap-4"
-        >
+        <button className="py-4 px-8 bg-fore text-back font-bold rounded-3xl flex items-center gap-4">
           <span>Login with GitHub</span>
           <GHIcon fill="currentColor" className="h-4 w-4" />
-        </Link>
+        </button>
         <Link href={"/about"} className="text-xs underline underline-offset-2">
           What&apos;s this?
         </Link>

@@ -2,9 +2,18 @@ import clsx from "clsx";
 import Link from "next/link";
 import GHIcon from "../../public/images/github-alt.svg";
 
+/**
+ * Pro tip: don't do small = "small". I learned that this results in
+    string comparison, which is slow, compared to integer comparison
+  Enum properties are integers in Ts by default
+  In this case, small = 0, large = 1
+  Integers are passed by value, whereas strings are passed by pointers,
+    and memory access is expensive
+  Ref: https://romgrk.com/posts/optimizing-javascript
+ */
 export enum ELogoSize {
-  small = "small",
-  large = "large",
+  small,
+  large,
 }
 
 type Props = {
