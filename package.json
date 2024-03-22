@@ -31,7 +31,7 @@
     "typescript": "^5"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "npm run lint",
+    "*.{ts,tsx}": "eslint --cache --fix",
     "*.{ts,tsx,css,md}": "prettier --write"
   }
 }
