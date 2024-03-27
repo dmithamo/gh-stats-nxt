@@ -8,10 +8,4 @@ export const {
   signOut,
 } = NextAuth({
   providers: [GitHub],
-  callbacks: {
-    async redirect({ baseUrl }) {
-      const authorizationCallbackURL = '/api/auth/callback/github';
-      return baseUrl + authorizationCallbackURL;
-    },
-  },
 });

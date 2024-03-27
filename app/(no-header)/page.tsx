@@ -1,6 +1,6 @@
 import { signIn } from '@/app/lib/auth';
 import Link from 'next/link';
-import GHIcon from '../../public/images/github.svg';
+import GHIcon from '../../public/images/github-auth.svg';
 import { AppLogo, ELogoSize } from '../components/app-logo';
 
 export default function HomePage() {
