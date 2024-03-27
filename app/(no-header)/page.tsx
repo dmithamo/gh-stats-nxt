@@ -1,7 +1,7 @@
+import { signIn } from '@/app/lib/auth';
 import Link from 'next/link';
+import GHIcon from '../../public/images/github.svg';
 import { AppLogo, ELogoSize } from '../components/app-logo';
-
-import GHIcon from '../../public/images/github-alt.svg';
 
 export default function HomePage() {
   return (
@@ -14,10 +14,15 @@ export default function HomePage() {
       </div>
       <div className="font-extralight">Sample D3 output here maybe? Yes! Incentive to login</div>
       <div className="p-8 w-fit rounded-full flex flex-col items-center justify-center gap-6">
-        <form>
-          <button className="py-4 px-8 bg-fore text-back font-bold rounded-3xl flex items-center gap-4">
+        <form
+          action={async () => {
+            'use server';
+            await signIn('github');
+          }}
+        >
+          <button type="submit" className="py-4 px-8 bg-fore text-back font-bold rounded-3xl flex items-center gap-4">
             <span>Login with GitHub</span>
-            <GHIcon fill="currentColor" className="h-4 w-4" />
+            <GHIcon fill="currentColor" className="h-6 w-6" />
           </button>
         </form>
         <Link href={'/about'} className="text-xs underline underline-offset-2">

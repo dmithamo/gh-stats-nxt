@@ -1,4 +1,4 @@
-import { AppFooter } from "../components/app-footer";
+import { AppFooter } from '../components/app-footer';
 
 type Props = {
   children: React.ReactNode;

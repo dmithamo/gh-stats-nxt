@@ -1,7 +1,9 @@
+import { auth } from '@/app/lib/auth';
 import type { NextRequest } from 'next/server';
 
-export function middleware(request: NextRequest) {
-  const user = request.cookies.get('currentUser')?.value;
+export async function middleware(request: NextRequest) {
+  const session = await auth();
+  const user = session?.user;
 
   if (user && !request.nextUrl.pathname.startsWith('/dashboard')) {
     return Response.redirect(new URL('/dashboard', request.url));
