@@ -24,7 +24,7 @@ export const UserAvatar: React.FC<Props> = ({ user }) => {
       </button>
 
       {isModalShown && (
-        <div className="fixed top-0 right-0 w-full sm:w-[400px] h-screen sm:h-[300px] bg-back shadow rounded border p-8 flex flex-col items-start justify-between">
+        <div className="fixed top-0 right-0 w-full sm:w-[400px] h-[300px] bg-back shadow rounded border border-back p-8 flex flex-col items-start justify-between">
           <CloseIcon
             onClick={toggleIsModalShown}
             fill="currentColor"
