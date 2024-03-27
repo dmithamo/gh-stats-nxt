@@ -61,8 +61,8 @@ const Avatar: React.FC<{ user?: Session['user']; isBig?: boolean }> = ({ user, i
   <Image
     className="rounded-full"
     priority
-    height={isBig ? 75 : 50}
-    width={isBig ? 75 : 50}
+    height={isBig ? 75 : 40}
+    width={isBig ? 75 : 40}
     src={user?.image || ''}
     alt="GitHub user avatar"
   />
