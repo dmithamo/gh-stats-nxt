@@ -2,18 +2,23 @@
 
 import type { Session } from 'next-auth';
 import Image from 'next/image';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 
 import { signOut } from 'next-auth/react';
 import CloseIcon from '../../public/images/circle-xmark.svg';
+import { useClickOutside } from '../lib/hooks/useClickOutside';
 
 type Props = {
   user?: Session['user'];
 };
 export const UserAvatar: React.FC<Props> = ({ user }) => {
   const [isModalShown, setIsModalShown] = useState<boolean>(false);
-
   const toggleIsModalShown = () => setIsModalShown((current) => !current);
+
+  const ref = useRef(null);
+  useClickOutside(ref, () => {
+    setIsModalShown(false);
+  });
 
   if (!user) return null;
 
@@ -24,7 +29,10 @@ export const UserAvatar: React.FC<Props> = ({ user }) => {
       </button>
 
       {isModalShown && (
-        <div className="fixed top-0 right-0 w-full sm:w-[400px] h-[300px] bg-back shadow rounded border border-back p-8 flex flex-col items-start justify-between">
+        <div
+          ref={ref}
+          className="fixed top-0 right-0 w-full sm:w-[400px] h-[300px] bg-back shadow rounded border border-back p-8 flex flex-col items-start justify-between"
+        >
           <CloseIcon
             onClick={toggleIsModalShown}
             fill="currentColor"
