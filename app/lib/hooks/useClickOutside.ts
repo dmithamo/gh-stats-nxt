@@ -8,7 +8,7 @@ export function useClickOutside(ref: RefObject<HTMLElement> | null, handleClickO
       const target = event.target as Node;
       if (!target || !target.isConnected) return;
 
-      const isOutside = ref && !(ref.current as Node).contains(target);
+      const isOutside = ref && !(ref.current as Node)?.contains(target);
 
       if (isOutside) {
         handleClickOutside();
